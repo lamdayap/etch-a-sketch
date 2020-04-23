@@ -5,7 +5,7 @@ button.addEventListener('click', resetCanvas)
 function startingCanvas() {
     for (let i = 1; i <= 1024; i++) {
         let newDiv = document.createElement("div")
-        newDiv.classList.add(`column-${[i]}`,"grid-squares")
+        newDiv.classList.add("grid-squares")
         main.appendChild(newDiv);
     }
     fillSquares()
@@ -17,7 +17,7 @@ function fillSquares() {
         if (!square.classList.contains('drawn')) {
             square.classList.add('drawn', 'opacity01')       
         } else {
-            switch(square.classList[3]) {
+            switch(square.classList[2]) {
                 case 'opacity01' : square.classList.remove('opacity01');
                 square.classList.add('opacity02')
                 break;
@@ -57,10 +57,11 @@ function resetCanvas(squares) {
     currentDivs.forEach(div => div.parentNode.removeChild(div))
     canvasPicker()
     fillSquares()
+    console.log(squares.classList)
 }
 
 function canvasPicker() {
-    let num = prompt("What size canvas do you want? (enter numbers only)")
+    let num = prompt("What size canvas do you want? (numbers only) CAUTION: avoid entering too high a number (>150) as it may cause browser to crash)")
         for (let i = 1; i <= num*num; i++) {
             let newDiv = document.createElement("div")
             newDiv.classList.add("grid-squares")
