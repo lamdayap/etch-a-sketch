@@ -1,0 +1,77 @@
+:root {
+    --square-grid: 32;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    font-size:15px;
+	font-weight:bold;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color:#ffffff;
+	cursor:pointer;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+    width: 30%;
+	display: inline-block;
+	margin: .5em;
+	padding: 1em 2em;
+}
+.main {
+    margin: 0 auto;
+    width: 900px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(var(--square-grid), 1fr);
+    grid-template-rows: repeat(var(--square-grid), 1fr);
+
+    
+    border: 5px solid grey;
+}
+
+.grid-squares {
+    background-color: whitesmoke;
+}
+
+.drawn {
+    background-color:green;
+}
+
+.opacity01 {
+    opacity: 0.1;
+}
+
+.opacity02 {
+    opacity: 0.2;
+}
+
+.opacity03 {
+    opacity: 0.3;
+}
+
+.opacity04 {
+    opacity: 0.4;
+}
+
+.opacity05 {
+    opacity: 0.5;
+}
+
+.opacity06 {
+    opacity: 0.6;
+}
+
+.opacity07 {
+    opacity: 0.7;
+}
+
+.opacity08 {
+    opacity: 0.8;
+}
+
+.opacity09 {
+    opacity: 0.9;
+}
